@@ -1,6 +1,7 @@
  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
  
+  resources :people_details
   root to: "main#index"
   
   get "sign_up", to: "registrations#new"
@@ -9,5 +10,6 @@ Rails.application.routes.draw do
 # GET /about
   get "about-us", to: "about#index", as: :about
 
+  resources :posts
   
 end
