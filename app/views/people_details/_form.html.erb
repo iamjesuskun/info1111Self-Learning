@@ -13,25 +13,25 @@
 
   <div class="field form-group">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name, class:"form-control" %>
+    <%= form.text_field :first_name, class:"form-control", required: true %>
   </div>
 
   <div class="field form-group">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name, class:"form-control" %>
+    <%= form.text_field :last_name, class:"form-control", required: true %>
   </div>
 
   <div class="field form-group">
     <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, class:"form-control" %>
+    <%= form.text_field :phone_number, class:"form-control", required: true, type: "tel", pattern: "[0]{1}[4-5]{1}[0-9]{2}[0-9]{3}[0-9]{3}" %>
   </div>
 
   <div class="field form-group">
     <%= form.label :email %>
-    <%= form.text_field :email, class:"form-control" %>
+    <%= form.text_field :email, class:"form-control", required: true %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value="Add New Friend" %>
   </div>
 <% end %>

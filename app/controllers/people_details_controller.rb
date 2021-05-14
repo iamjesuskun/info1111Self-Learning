@@ -25,7 +25,7 @@ class PeopleDetailsController < ApplicationController
 
     respond_to do |format|
       if @people_detail.save
-        format.html { redirect_to @people_detail, notice: "People detail was successfully created." }
+        format.html { redirect_to @people_detail, notice: "Person was successfully added." }
         format.json { render :show, status: :created, location: @people_detail }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class PeopleDetailsController < ApplicationController
   def update
     respond_to do |format|
       if @people_detail.update(people_detail_params)
-        format.html { redirect_to @people_detail, notice: "People detail was successfully updated." }
+        format.html { redirect_to @people_detail, notice: "Persons detail was successfully updated." }
         format.json { render :show, status: :ok, location: @people_detail }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class PeopleDetailsController < ApplicationController
   def destroy
     @people_detail.destroy
     respond_to do |format|
-      format.html { redirect_to people_details_url, notice: "People detail was successfully destroyed." }
+      format.html { redirect_to people_details_url, notice: "Persons details was successfully deleted." }
       format.json { head :no_content }
     end
   end

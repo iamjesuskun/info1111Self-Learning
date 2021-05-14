@@ -1,2 +1,3 @@
 class PeopleDetail < ApplicationRecord
+    
 end

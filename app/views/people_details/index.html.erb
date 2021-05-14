@@ -22,7 +22,7 @@
         <td><%= people_detail.email %></td>
         <td><%= link_to 'Show', people_detail %></td>
         <td><%= link_to 'Edit', edit_people_detail_path(people_detail) %></td>
-        <td><%= link_to 'Destroy', people_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', people_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,3 @@
 
 <br>
 
-<%= link_to 'New Friend', new_people_detail_path, class:"btn btn-light" %>
