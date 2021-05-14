@@ -1,7 +1,7 @@
 <%= form_with(model: people_detail) do |form| %>
   <% if people_detail.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(people_detail.errors.count, "error") %> prohibited this people_detail from being saved:</h2>
+      <h2><%= pluralize(people_detail.errors.count, "error") %> prohibited this person's data from being saved:</h2>
 
       <ul>
         <% people_detail.errors.each do |error| %>
@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
+    <%= form.text_field :phone_number, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class:"form-control" %>
   </div>
 
   <div class="actions">
