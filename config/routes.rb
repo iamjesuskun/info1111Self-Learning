@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 # GET /about
   get "about-us", to: "about#index", as: :about
 
-  get 'search', to: "main#search", as: :search_main
+  get 'search', to: "search#index", as: :search_page
   resources :posts
   
 end
