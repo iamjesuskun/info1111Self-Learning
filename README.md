@@ -1,24 +1,18 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+README
 
-* Ruby version
+If Microsoft Visual Studio Code is the IDE in use:
 
-* System dependencies
+* install Rails and Ruby extensions
 
-* Configuration
+else:
 
-* Database creation
+* ensure Rails and Ruby are install via homebrew or using other IDEs and text editors
+* 
+After that:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ensure terminal is running within the rails app 
+* path is ~/info1111Self-Learning$, run the website using "rails s", this starts the server locally
+* run 'bundle' in terminal to install all appropriate gemfiles needed for the rails app
+* go to localhost:3000 on your browser to see the website
