@@ -25,20 +25,25 @@ class PeopleDetailsController < ApplicationController
 
     respond_to do |format|
       if @people_detail.save
-        format.html { redirect_to @people_detail, notice: "Person was successfully added." }
+        format.html { redirect_to @people_detail }
+        flash[:notice] = "Persons was successfully added."
         format.json { render :show, status: :created, location: @people_detail }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @people_detail.errors, status: :unprocessable_entity }
       end
-    end
+    
   end
 
+    
+
+
+  end
   # PATCH/PUT /people_details/1 or /people_details/1.json
   def update
     respond_to do |format|
       if @people_detail.update(people_detail_params)
-        format.html { redirect_to @people_detail, notice: "Persons detail was successfully updated." }
+        format.html { redirect_to @people_detail, notice: "Persons details was successfully updated." }
         format.json { render :show, status: :ok, location: @people_detail }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +56,7 @@ class PeopleDetailsController < ApplicationController
   def destroy
     @people_detail.destroy
     respond_to do |format|
-      format.html { redirect_to people_details_url, notice: "Persons details was successfully deleted." }
+      format.html { redirect_to people_details_url, alert: "Persons details was successfully deleted."}
       format.json { head :no_content }
     end
   end
