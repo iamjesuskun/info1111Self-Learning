@@ -1,7 +1,30 @@
 <h1>Sign Up</h1>
 
 <%= form_with model: @user, url: sign_up_path do |form| %>
-    <%= form.text_field :email %>
-    <%= form.text_field :password %>
-    <%= form.text_field :password_confirmation %>
+    <% if @user.errors.any? %>
+        <div class="alert alert-warning">
+            <% @user.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+    <% end %>
+    
+    <div class="field form-group">
+        <%= form.label :email%>
+        <%= form.text_field :email, required: true %>
+    </div>
+    
+    <div class="field form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+    </div>
+    
+    <div class="field form-group">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation%>
+    </div>
+    
+    <div class="actions">
+        <%= form.submit value="Sign Up", class:'btn btn-primary'%>
+    </div>
 <% end %>
