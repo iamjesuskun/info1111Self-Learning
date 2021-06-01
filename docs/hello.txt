@@ -1,1 +1,9 @@
 just checking out
+Learnings
+What was your outcome for the level? What did you intend to learn? What did you learn? 
+How did you use your tool to achieve your outcome(s)? What are your artifacts?
+
+<< Description of your understanding of the concepts for this level, their use (i.e. examples of their use) and syntax>>
+
+<<Description of how you used your tool with screenshot examples of your use of the tool to achieve your outcome(s) for this level>> 
+<<Show you can apply your tool to solve the problems you described in your proposal. Include evidence of through the artifact you have created using your chosen tool to solve hypothetical problems you have found or developed related to your domain of application>>
